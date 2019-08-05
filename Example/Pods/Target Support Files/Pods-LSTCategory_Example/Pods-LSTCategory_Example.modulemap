@@ -1,0 +1,6 @@
+framework module Pods_LSTCategory_Example {
+  umbrella header "Pods-LSTCategory_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -114,6 +114,7 @@
 		312D272D22F7FDF300DEE881 /* Code */ = {
 			isa = PBXGroup;
 			children = (
+				3178A19B22F87451005E48B2 /* UIView+LSTView */,
 				312D272E22F8085200DEE881 /* UIColor+LSTColor */,
 			);
 			name = Code;
@@ -127,6 +128,13 @@
 				312D273022F8088200DEE881 /* UIColor+LSTColor.m */,
 			);
 			path = "UIColor+LSTColor";
+			sourceTree = "<group>";
+		};
+		3178A19B22F87451005E48B2 /* UIView+LSTView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "UIView+LSTView";
 			sourceTree = "<group>";
 		};
 		3AE1FCCC34F472AC8DB4405D0198161E /* Targets Support Files */ = {

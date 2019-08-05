@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LSTCategory'
-  s.version          = '0.1.08051312'
+  s.version          = '0.1.08052257'
   s.summary          = 'LSTCategory.'
 
 # This description is used to generate tags and improve search results.

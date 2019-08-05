@@ -10,6 +10,8 @@
 #endif
 #endif
 
+#import "UIColor+LSTColor.h"
+#import "UIView+LSTView.h"
 
 FOUNDATION_EXPORT double LSTCategoryVersionNumber;
 FOUNDATION_EXPORT const unsigned char LSTCategoryVersionString[];

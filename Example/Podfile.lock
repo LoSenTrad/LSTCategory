@@ -1,5 +1,5 @@
 PODS:
-  - LSTCategory (0.1.0)
+  - LSTCategory (0.1.08052321)
 
 DEPENDENCIES:
   - LSTCategory (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  LSTCategory: 9e3f6814ba639928f67c99c5b837311cd8914a61
+  LSTCategory: 3aa497711523b44ed0daffa28a1fdf049bbb08c2
 
 PODFILE CHECKSUM: ba45eedc08c1819611804b752e0fa303a73d15b1
 

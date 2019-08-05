@@ -1,8 +1,8 @@
 {
   "name": "LSTCategory",
-  "version": "0.1.0",
-  "summary": "A short description of LSTCategory.",
-  "description": "TODO: Add long description of the pod here.",
+  "version": "0.1.08052321",
+  "summary": "LSTCategory.",
+  "description": "A short description of LSTCategory.",
   "homepage": "https://github.com/LoSenTrad/LSTCategory",
   "license": {
     "type": "MIT",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/LoSenTrad/LSTCategory.git",
-    "tag": "0.1.0"
+    "tag": "0.1.08052321"
   },
   "platforms": {
     "ios": "8.0"

@@ -8,6 +8,9 @@
 
 #import "UIView+LSTView.h"
 
+#define kShadowViewTag 2132
+#define kValidDirections [NSArray arrayWithObjects: @"top", @"bottom", @"left", @"right",nil]
+
 @implementation UIView (QTFrame)
 
 
@@ -350,6 +353,162 @@ CGFloat LSTBottomHemViewMargin(CGFloat margin) {
     }
     return vc;
 }
+
+- (NSData *)snapshotPDF {
+    CGRect bounds = self.bounds;
+    NSMutableData* data = [NSMutableData data];
+    CGDataConsumerRef consumer = CGDataConsumerCreateWithCFData((__bridge CFMutableDataRef)data);
+    CGContextRef context = CGPDFContextCreate(consumer, &bounds, NULL);
+    CGDataConsumerRelease(consumer);
+    if (!context) return nil;
+    CGPDFContextBeginPage(context, NULL);
+    CGContextTranslateCTM(context, 0, bounds.size.height);
+    CGContextScaleCTM(context, 1.0, -1.0);
+    [self.layer renderInContext:context];
+    CGPDFContextEndPage(context);
+    CGPDFContextClose(context);
+    CGContextRelease(context);
+    return data;
+}
+
+- (void)removeAllSubviews {
+    while (self.subviews.count) {
+        [self.subviews.lastObject removeFromSuperview];
+    }
+}
+
+- (void) makeInsetShadow {
+    NSArray *shadowDirections = [NSArray arrayWithObjects:@"top", @"bottom", @"left" , @"right" , nil];
+    UIColor *color = [UIColor colorWithRed:(0.0) green:(0.0) blue:(0.0) alpha:0.5];
+    
+    UIView *shadowView = [self createShadowViewWithRadius:3 Color:color Directions:shadowDirections];
+    shadowView.tag = kShadowViewTag;
+    
+    [self addSubview:shadowView];
+}
+
+- (void) makeInsetShadowWithRadius:(float)radius Alpha:(float)alpha {
+    NSArray *shadowDirections = [NSArray arrayWithObjects:@"top", @"bottom", @"left" , @"right" , nil];
+    UIColor *color = [UIColor colorWithRed:(0.0) green:(0.0) blue:(0.0) alpha:alpha];
+    
+    UIView *shadowView = [self createShadowViewWithRadius:radius Color:color Directions:shadowDirections];
+    shadowView.tag = kShadowViewTag;
+    
+    [self addSubview:shadowView];
+}
+
+- (void) makeInsetShadowWithRadius:(float)radius Color:(UIColor *)color Directions:(NSArray *)directions {
+    UIView *shadowView = [self createShadowViewWithRadius:radius Color:color Directions:directions];
+    shadowView.tag = kShadowViewTag;
+    
+    [self addSubview:shadowView];
+}
+
+- (UIView *) createShadowViewWithRadius:(float)radius Color:(UIColor *)color Directions:(NSArray *)directions {
+    UIView *shadowView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height)];
+    shadowView.backgroundColor = [UIColor clearColor];
+    
+    // Ignore duplicate direction
+    NSMutableDictionary *directionDict = [[NSMutableDictionary alloc] init];
+    for (NSString *direction in directions) [directionDict setObject:@"1" forKey:direction];
+    
+    //    for (NSString *direction in directionDict) {
+    //        // Ignore invalid direction
+    //        if ([kValidDirections containsObject:direction])
+    //        {
+    //            CAGradientLayer *shadow = [CAGradientLayer layer];
+    //            shadow.locations = @[@(0.0),@(0.5)];
+    //
+    //            if ([direction isEqualToString:@"top"]) {
+    //                [shadow setStartPoint:CGPointMake(0.5, 0.0)];
+    //                [shadow setEndPoint:CGPointMake(0.5, 1.0)];
+    //                shadow.frame = CGRectMake(-radius, -radius, self.bounds.size.width + radius*2, radius);
+    //                shadow.colors = [NSArray arrayWithObjects:(id)[self.backgroundColor CGColor], (id)[color CGColor], nil];
+    //            }
+    //            else if ([direction isEqualToString:@"bottom"])
+    //            {
+    //                [shadow setStartPoint:CGPointMake(0.5, 1.0)];
+    //                [shadow setEndPoint:CGPointMake(0.5, 0.0)];
+    //                shadow.frame = CGRectMake(-radius, self.bounds.size.height, self.bounds.size.width + radius*2, radius);
+    //                shadow.colors = [NSArray arrayWithObjects:(id)[self.backgroundColor CGColor] ,(id)[color CGColor], nil];
+    //            } else if ([direction isEqualToString:@"left"])
+    //            {
+    //                shadow.frame = CGRectMake(-radius, -radius, radius, self.bounds.size.height + radius*2);
+    //                [shadow setStartPoint:CGPointMake(0.0, 0.5)];
+    //                [shadow setEndPoint:CGPointMake(1.0, 0.5)];
+    //                shadow.colors = [NSArray arrayWithObjects:(id)[self.backgroundColor CGColor],(id)[color CGColor], nil];
+    //
+    //            } else if ([direction isEqualToString:@"right"])
+    //            {
+    //                shadow.frame = CGRectMake(self.bounds.size.width, -radius, radius, self.bounds.size.height + radius*2);
+    //                [shadow setStartPoint:CGPointMake(1.0, 0.5)];
+    //                [shadow setEndPoint:CGPointMake(0.0, 0.5)];
+    //                shadow.colors = [NSArray arrayWithObjects:(id)[self.backgroundColor CGColor],(id)[color CGColor], nil];
+    //            }
+    //            // 后边一个颜色要和所加视图背景颜色一样
+    //
+    //            [shadowView.layer insertSublayer:shadow atIndex:0];
+    //        }
+    //    }
+    
+    for (NSString *direction in directionDict) {
+        // Ignore invalid direction
+        if ([kValidDirections containsObject:direction])
+        {
+            CALayer *shadow = [CAGradientLayer layer];
+            shadow.backgroundColor = color.CGColor;
+            
+            if ([direction isEqualToString:@"top"]) {
+                shadow.frame = CGRectMake(0, 0, self.bounds.size.width, radius);
+            }
+            else if ([direction isEqualToString:@"bottom"])
+            {
+                shadow.frame = CGRectMake(0, self.bounds.size.height, self.bounds.size.width, radius);
+            } else if ([direction isEqualToString:@"left"])
+            {
+                shadow.frame = CGRectMake(0, 0, radius, self.bounds.size.height );
+            } else if ([direction isEqualToString:@"right"])
+            {
+                shadow.frame = CGRectMake(self.bounds.size.width, 0, radius, self.bounds.size.height);
+            }
+            [shadowView.layer insertSublayer:shadow atIndex:0];
+        }
+    }
+    
+    
+    return shadowView;
+}
+
+- (void)addBorderWithColor:(UIColor *)color size:(CGFloat)size borderTypes:(NSArray *)types{
+    for (int i = 0 ; i < types.count; i ++) {
+        [self addBorderLayerWithColor:color size:size borderType:[types[i] integerValue]];
+    }
+}
+
+- (void)addBorderLayerWithColor:(UIColor *)color size:(CGFloat)size borderType:(LSTBorderType)boderType{
+    CALayer * layer = [CALayer layer];
+    layer.backgroundColor = color.CGColor;
+    [self.layer addSublayer:layer];
+    
+    switch (boderType) {
+        case LSTBorderTypeTop:
+            layer.frame = CGRectMake(0, 0, self.frame.size.width, size);
+            break;
+        case LSTBorderTypeLeft:
+            layer.frame = CGRectMake(0, 0, size, self.frame.size.height);
+            break;
+        case LSTBorderTypeBottom:
+            layer.frame = CGRectMake(0, self.frame.size.height - size, self.frame.size.width, size);
+            break;
+        case LSTBorderTypeRight:
+            layer.frame = CGRectMake(self.frame.size.width - size, 0, size, self.frame.size.height);
+            break;
+        default:
+            break;
+    }
+    
+}
+
 
 /** 取消以上方法 发出警告 */
 - (void)temp {

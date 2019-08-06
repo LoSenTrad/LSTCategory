@@ -12,6 +12,8 @@
 		3070D2FFBA65AD0BFEA27D4DDCD69A73 /* Pods-LSTCategory_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 32F7345A6EECFCD6A563EAA2377355CB /* Pods-LSTCategory_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3178A1A222F970F2005E48B2 /* NSObject+LSTObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3178A1A022F970F2005E48B2 /* NSObject+LSTObject.m */; };
 		3178A1A322F970F2005E48B2 /* NSObject+LSTObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 3178A1A122F970F2005E48B2 /* NSObject+LSTObject.h */; };
+		3178A1B122F98730005E48B2 /* NSString+LSTString.m in Sources */ = {isa = PBXBuildFile; fileRef = 3178A1AF22F98730005E48B2 /* NSString+LSTString.m */; };
+		3178A1B222F98730005E48B2 /* NSString+LSTString.h in Headers */ = {isa = PBXBuildFile; fileRef = 3178A1B022F98730005E48B2 /* NSString+LSTString.h */; };
 		327903CC40546A72F0010E4F27D3B12E /* UIView+LSTView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AA05849111DAC9716C060CC30D044EC /* UIView+LSTView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4DBE75F2B52614362C90CDC24D6BF117 /* LSTCategory-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E6684312E5F354005A2AA1441FCB984 /* LSTCategory-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		69EE81612717082B83FE2315A7920E68 /* Pods-LSTCategory_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AA27E27362D9F8226410F4866DDE4155 /* Pods-LSTCategory_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -53,6 +55,8 @@
 		2B49099E44C952F5BC93D96C6505A808 /* UIColor+LSTColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIColor+LSTColor.h"; sourceTree = "<group>"; };
 		3178A1A022F970F2005E48B2 /* NSObject+LSTObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+LSTObject.m"; sourceTree = "<group>"; };
 		3178A1A122F970F2005E48B2 /* NSObject+LSTObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+LSTObject.h"; sourceTree = "<group>"; };
+		3178A1AF22F98730005E48B2 /* NSString+LSTString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+LSTString.m"; sourceTree = "<group>"; };
+		3178A1B022F98730005E48B2 /* NSString+LSTString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+LSTString.h"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		32F7345A6EECFCD6A563EAA2377355CB /* Pods-LSTCategory_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LSTCategory_Example-umbrella.h"; sourceTree = "<group>"; };
 		4877EA117C40CD11C047BF4A5ACFE48A /* Pods-LSTCategory_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LSTCategory_Example-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -151,6 +155,16 @@
 			path = "LSTCategory/Classes/Code/NSObject+LSTObject";
 			sourceTree = "<group>";
 		};
+		3178A1AE22F98730005E48B2 /* NSString+LSTString */ = {
+			isa = PBXGroup;
+			children = (
+				3178A1AF22F98730005E48B2 /* NSString+LSTString.m */,
+				3178A1B022F98730005E48B2 /* NSString+LSTString.h */,
+			);
+			name = "NSString+LSTString";
+			path = "LSTCategory/Classes/Code/NSString+LSTString";
+			sourceTree = "<group>";
+		};
 		3AE1FCCC34F472AC8DB4405D0198161E /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -218,6 +232,7 @@
 		C26B7D60AB869AA01535F4C0C9B26A4B /* LSTCategory */ = {
 			isa = PBXGroup;
 			children = (
+				3178A1AE22F98730005E48B2 /* NSString+LSTString */,
 				3178A19F22F970F2005E48B2 /* NSObject+LSTObject */,
 				8A3BFB73CBE5F5FE83D0B1E96D75B572 /* Pod */,
 				0A91334B456E333454A25CFA536ED748 /* Support Files */,
@@ -289,6 +304,7 @@
 				4DBE75F2B52614362C90CDC24D6BF117 /* LSTCategory-umbrella.h in Headers */,
 				8A3E8752A11010C460FEA520E3A24AAF /* UIColor+LSTColor.h in Headers */,
 				327903CC40546A72F0010E4F27D3B12E /* UIView+LSTView.h in Headers */,
+				3178A1B222F98730005E48B2 /* NSString+LSTString.h in Headers */,
 				3178A1A322F970F2005E48B2 /* NSObject+LSTObject.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,6 +441,7 @@
 				3178A1A222F970F2005E48B2 /* NSObject+LSTObject.m in Sources */,
 				C5033D648783C1D181B64D45711EE2D9 /* LSTCategory-dummy.m in Sources */,
 				D7261D69508136546BFDD094ADD7CC84 /* UIColor+LSTColor.m in Sources */,
+				3178A1B122F98730005E48B2 /* NSString+LSTString.m in Sources */,
 				19F2CDDC52FCA10A53CC74DAC935896E /* UIView+LSTView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

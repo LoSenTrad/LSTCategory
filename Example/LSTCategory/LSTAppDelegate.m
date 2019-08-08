@@ -7,6 +7,8 @@
 //
 
 #import "LSTAppDelegate.h"
+#import "LSTViewController.h"
+
 
 @implementation LSTAppDelegate
 

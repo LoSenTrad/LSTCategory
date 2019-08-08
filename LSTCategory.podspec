@@ -8,17 +8,9 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LSTCategory'
-  s.version          = '0.1.08061804'
+  s.version          = '0.1.08081005'
   s.summary          = 'LSTCategory.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
   s.description      = 'A short description of LSTCategory.'
-
   s.homepage         = 'https://github.com/LoSenTrad/LSTCategory'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
@@ -28,7 +20,17 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'LSTCategory/Classes/**/*'
+  #s.source_files = 'LSTCategory/Classes/**/*'
+  
+  
+  s.default_subspec = 'Core'
+  
+  s.subspec 'Code' do |code|
+      code.source_files = ''LSTCategory/Classes/Code/**/*'
+      #core.public_header_files = 'ZFPlayer/Classes/Core/**/*.h'
+      code.frameworks = 'UIKit'
+  end
+  
   
   # s.resource_bundles = {
   #   'LSTCategory' => ['LSTCategory/Assets/*.png']

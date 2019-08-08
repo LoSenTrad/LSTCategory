@@ -10,6 +10,8 @@
 #endif
 #endif
 
+#import "NSObject+LSTObject.h"
+#import "NSString+LSTString.h"
 #import "UIColor+LSTColor.h"
 #import "UIView+LSTView.h"
 

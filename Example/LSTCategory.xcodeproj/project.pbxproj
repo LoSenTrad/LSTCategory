@@ -13,7 +13,7 @@
 		31FAEE5722FBCA9600973183 /* UIColor+LSTColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FAEE5322FBCA9600973183 /* UIColor+LSTColor.m */; };
 		31FAEE5A22FBCE6300973183 /* NSArray+LSTArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FAEE5922FBCE6300973183 /* NSArray+LSTArray.m */; };
 		31FAEE5E22FBFA9200973183 /* CALayer+LSTLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FAEE5C22FBFA9200973183 /* CALayer+LSTLayer.m */; };
-		31FAEE6522FC05B800973183 /* UIImage+LSTImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FAEE6422FC05B800973183 /* UIImage+LSTImage.m */; };
+		31FAEE6822FC09CD00973183 /* UIImage+LSTImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FAEE6722FC09CD00973183 /* UIImage+LSTImage.m */; };
 		51F6F56CBF3FE71ACFD1751F /* Pods_LSTCategory_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4AD09F64C934CE6A38E6976 /* Pods_LSTCategory_Example.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
@@ -56,8 +56,8 @@
 		31FAEE5922FBCE6300973183 /* NSArray+LSTArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+LSTArray.m"; sourceTree = "<group>"; };
 		31FAEE5C22FBFA9200973183 /* CALayer+LSTLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+LSTLayer.m"; sourceTree = "<group>"; };
 		31FAEE5D22FBFA9200973183 /* CALayer+LSTLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+LSTLayer.h"; sourceTree = "<group>"; };
-		31FAEE6322FC05B800973183 /* UIImage+LSTImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+LSTImage.h"; path = "../../../../../../../../KitNoteCode/KitNote/Classes/Expand(扩展)/Category(分类)/UIImage+LSTImage.h"; sourceTree = "<group>"; };
-		31FAEE6422FC05B800973183 /* UIImage+LSTImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+LSTImage.m"; path = "../../../../../../../../KitNoteCode/KitNote/Classes/Expand(扩展)/Category(分类)/UIImage+LSTImage.m"; sourceTree = "<group>"; };
+		31FAEE6622FC09CC00973183 /* UIImage+LSTImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+LSTImage.h"; sourceTree = "<group>"; };
+		31FAEE6722FC09CD00973183 /* UIImage+LSTImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+LSTImage.m"; sourceTree = "<group>"; };
 		3A606F0B40785D19969A4EB2 /* Pods-LSTCategory_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LSTCategory_Example.release.xcconfig"; path = "Target Support Files/Pods-LSTCategory_Example/Pods-LSTCategory_Example.release.xcconfig"; sourceTree = "<group>"; };
 		3B95E379CFBF94A6DD29FECD /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* LSTCategory_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LSTCategory_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -199,8 +199,8 @@
 		31FAEE6222FC037800973183 /* UIImage +LSTImage */ = {
 			isa = PBXGroup;
 			children = (
-				31FAEE6322FC05B800973183 /* UIImage+LSTImage.h */,
-				31FAEE6422FC05B800973183 /* UIImage+LSTImage.m */,
+				31FAEE6622FC09CC00973183 /* UIImage+LSTImage.h */,
+				31FAEE6722FC09CD00973183 /* UIImage+LSTImage.m */,
 			);
 			path = "UIImage +LSTImage";
 			sourceTree = "<group>";
@@ -467,7 +467,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F59E195388D20070C39A /* LSTAppDelegate.m in Sources */,
-				31FAEE6522FC05B800973183 /* UIImage+LSTImage.m in Sources */,
+				31FAEE6822FC09CD00973183 /* UIImage+LSTImage.m in Sources */,
 				31FAEE5E22FBFA9200973183 /* CALayer+LSTLayer.m in Sources */,
 				31FAEE5422FBCA9600973183 /* UIView+LSTView.m in Sources */,
 				31FAEE5A22FBCE6300973183 /* NSArray+LSTArray.m in Sources */,

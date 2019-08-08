@@ -11,6 +11,8 @@
 #import <NSObject+LSTObject.h>
 #import <UIColor+LSTColor.h>
 #import <UIView+LSTView.h>
+#import <CALayer+LSTLayer.h>
+#import <NSArray+LSTArray.h>
 
 
 
@@ -24,6 +26,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    NSString *str = @"123";
+    
+    NSString *res = [str base64Encode];
 
 }
 

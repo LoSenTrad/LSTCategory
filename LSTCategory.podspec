@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LSTCategory'
-  s.version          = '0.1.08081005'
+  s.version          = '0.1.08081531'
   s.summary          = 'LSTCategory.'
   s.description      = 'A short description of LSTCategory.'
   s.homepage         = 'https://github.com/LoSenTrad/LSTCategory'
@@ -23,10 +23,10 @@ Pod::Spec.new do |s|
   #s.source_files = 'LSTCategory/Classes/**/*'
   
   
-  s.default_subspec = 'Core'
+  s.default_subspec = 'Code'
   
   s.subspec 'Code' do |code|
-      code.source_files = ''LSTCategory/Classes/Code/**/*'
+      code.source_files = 'LSTCategory/Classes/Code/**/*'
       #core.public_header_files = 'ZFPlayer/Classes/Core/**/*.h'
       code.frameworks = 'UIKit'
   end

@@ -1,6 +1,6 @@
 {
   "name": "LSTCategory",
-  "version": "0.1.08061804",
+  "version": "0.1.08081005",
   "summary": "LSTCategory.",
   "description": "A short description of LSTCategory.",
   "homepage": "https://github.com/LoSenTrad/LSTCategory",
@@ -13,10 +13,17 @@
   },
   "source": {
     "git": "https://github.com/LoSenTrad/LSTCategory.git",
-    "tag": "0.1.08061804"
+    "tag": "0.1.08081005"
   },
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "LSTCategory/Classes/**/*"
+  "default_subspecs": "Code",
+  "subspecs": [
+    {
+      "name": "Code",
+      "source_files": "LSTCategory/Classes/Code/**/*",
+      "frameworks": "UIKit"
+    }
+  ]
 }

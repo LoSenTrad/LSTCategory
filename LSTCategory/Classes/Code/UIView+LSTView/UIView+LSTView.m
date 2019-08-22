@@ -489,7 +489,7 @@ CGFloat LSTBottomHemViewMargin(CGFloat margin) {
     CALayer * layer = [CALayer layer];
     layer.backgroundColor = color.CGColor;
     [self.layer addSublayer:layer];
-    
+    [UIFont systemFontOfSize:4];
     switch (boderType) {
         case LSTBorderTypeTop:
             layer.frame = CGRectMake(0, 0, self.frame.size.width, size);

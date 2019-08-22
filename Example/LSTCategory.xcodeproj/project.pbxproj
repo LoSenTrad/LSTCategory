@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		312B8751230C4E0B00B1F784 /* UIFont+LSTFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 312B8750230C4E0B00B1F784 /* UIFont+LSTFont.m */; };
 		313D6EAA23040BEF00A7E1B8 /* UIProgressView+LSTWebViewProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 313D6EA823040BEF00A7E1B8 /* UIProgressView+LSTWebViewProgress.m */; };
 		31FAEE5422FBCA9600973183 /* UIView+LSTView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FAEE4922FBCA9600973183 /* UIView+LSTView.m */; };
 		31FAEE5522FBCA9600973183 /* NSString+LSTString.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FAEE4B22FBCA9600973183 /* NSString+LSTString.m */; };
@@ -45,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		312B874F230C4E0B00B1F784 /* UIFont+LSTFont.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIFont+LSTFont.h"; sourceTree = "<group>"; };
+		312B8750230C4E0B00B1F784 /* UIFont+LSTFont.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIFont+LSTFont.m"; sourceTree = "<group>"; };
 		313D6EA823040BEF00A7E1B8 /* UIProgressView+LSTWebViewProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIProgressView+LSTWebViewProgress.m"; sourceTree = "<group>"; };
 		313D6EA923040BEF00A7E1B8 /* UIProgressView+LSTWebViewProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIProgressView+LSTWebViewProgress.h"; sourceTree = "<group>"; };
 		31FAEE4822FBCA9600973183 /* UIView+LSTView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LSTView.h"; sourceTree = "<group>"; };
@@ -130,6 +133,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		312B874E230C4DCD00B1F784 /* UIFont+LSTFont */ = {
+			isa = PBXGroup;
+			children = (
+				312B874F230C4E0B00B1F784 /* UIFont+LSTFont.h */,
+				312B8750230C4E0B00B1F784 /* UIFont+LSTFont.m */,
+			);
+			path = "UIFont+LSTFont";
+			sourceTree = "<group>";
+		};
 		313D6EA723040BD500A7E1B8 /* UIProgressView+LSTWebViewProgress */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +154,7 @@
 		31FAEE4622FBCA9600973183 /* Code */ = {
 			isa = PBXGroup;
 			children = (
+				312B874E230C4DCD00B1F784 /* UIFont+LSTFont */,
 				313D6EA723040BD500A7E1B8 /* UIProgressView+LSTWebViewProgress */,
 				31FAEE6222FC037800973183 /* UIImage +LSTImage */,
 				31FAEE5B22FBFA8900973183 /* CALayer+LSTLayer */,
@@ -484,6 +497,7 @@
 				31FAEE5E22FBFA9200973183 /* CALayer+LSTLayer.m in Sources */,
 				31FAEE5422FBCA9600973183 /* UIView+LSTView.m in Sources */,
 				313D6EAA23040BEF00A7E1B8 /* UIProgressView+LSTWebViewProgress.m in Sources */,
+				312B8751230C4E0B00B1F784 /* UIFont+LSTFont.m in Sources */,
 				31FAEE5A22FBCE6300973183 /* NSArray+LSTArray.m in Sources */,
 				6003F5A7195388D20070C39A /* LSTViewController.m in Sources */,
 				31FAEE5722FBCA9600973183 /* UIColor+LSTColor.m in Sources */,

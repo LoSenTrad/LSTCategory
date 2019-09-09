@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface NSArray (LSTArray)
 /**
@@ -19,4 +20,14 @@
 - (NSArray *)checkResponse;
 ///冒泡排序
 - (NSArray *)change:(NSMutableArray *)array;
+
+
+/** json数组转模型数组 依赖YYMoJdel */
+- (NSArray *)lst_JsonArrFormatToModel:(Class)className;
+
+
+
+
+
+
 @end

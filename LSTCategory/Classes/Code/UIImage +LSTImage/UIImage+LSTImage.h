@@ -32,4 +32,9 @@
 //若Scale为YES，则原图会根据Size进行拉伸-会变形
 //若Scale为NO，则原图会根据Size进行填充-不会变形
 - (UIImage *)thumbnailWithSize:(CGSize)asize;
+
+
+//设置图片快捷方式
+UIImage *LSTImageWithName(NSString *imgName);
+
 @end

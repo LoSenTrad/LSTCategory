@@ -7,6 +7,8 @@
 //
 
 #import "NSArray+LSTArray.h"
+#import "YYModel.h"
+
 
 @implementation NSArray (LSTArray)
 
@@ -45,6 +47,25 @@
     NSArray * resultArray = [[NSArray alloc]initWithArray:array];
     
     return resultArray;
+}
+
+
+/** json数组转模型数组 依赖YYMoJdel */
+- (NSArray *)lst_JsonArrFormatToModel:(Class)className {
+    
+//    Class modelClass = NSClassFromString(className);
+    
+    NSMutableArray *tempMarr = [NSMutableArray array];
+    for (int i = 0; i<self.count; i++) {
+        
+        
+        NSObject *model = [className yy_modelWithJSON:self[i]];
+        
+        [tempMarr addObject:model];
+    }
+    
+    return tempMarr.copy;
+    
 }
 
 @end

@@ -109,6 +109,21 @@
     return [self lst_ColorWithString:@"cccccc" alpha:1];
 }
 
+UIColor * LSTRGBColor(NSInteger r,NSInteger g,NSInteger b) {
+    return [LSTColor colorWithRed:r green:g blue:b alpha:1];
+}
+UIColor * LSTRGBColorWithAlpha(NSInteger r,NSInteger g,NSInteger b,CGFloat alpha) {
+    return [LSTColor colorWithRed:r green:g blue:b alpha:alpha];
+}
+UIColor * LSTHexColor(NSString *hexString) {
+    return [LSTColor lst_ColorWithString:hexString];
+}
+
+UIColor * LSTHexColorWithAlpha(NSString *hexString,CGFloat alpha) {
+    return [LSTColor lst_ColorWithString:hexString alpha:alpha];
+}
+
+
 
 @end
 

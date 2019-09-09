@@ -213,6 +213,11 @@
 }
 
 
+UIImage *LSTImageWithName(NSString *imgName) {
+    return [UIImage imageNamed:imgName];
+}
+
+
 
 
 @end

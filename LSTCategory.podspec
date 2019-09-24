@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LSTCategory'
-  s.version          = '0.1.09090955'
+  s.version          = '0.1.09241138'
   s.summary          = 'LSTCategory.'
   s.description      = 'A short description of LSTCategory.'
   s.homepage         = 'https://github.com/LoSenTrad/LSTCategory'

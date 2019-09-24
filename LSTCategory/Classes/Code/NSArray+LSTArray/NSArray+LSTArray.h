@@ -25,6 +25,9 @@
 /** json数组转模型数组 依赖YYMoJdel */
 - (NSArray *)lst_JsonArrFormatToModel:(Class)className;
 
+//数组转为json字符串
+- (NSString *)lst_arrayToJSONString:(NSArray *)array;
+
 
 
 

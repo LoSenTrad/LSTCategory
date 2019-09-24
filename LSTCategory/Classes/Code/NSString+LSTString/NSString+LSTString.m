@@ -291,6 +291,10 @@
     return platform;
 }
 
++ (NSString*)lst_loadBundleID{
+    return [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleIdentifier"];
+}
+
 - (CGSize)heightWithFont:(UIFont *)font
                 MaxWidth:(float)width{
     if (self.length==0) {

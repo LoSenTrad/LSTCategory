@@ -65,6 +65,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (float)lst_loadSystemVersion;
 /** 获取手机型号 */
 + (NSString *)lst_loadDeviceModel;
+/** 获取app唯一标识 */
++ (NSString*)lst_loadBundleID;
 
 - (CGSize)heightWithFont:(UIFont *)font MaxWidth:(float)width;
 /** 通过名字读取uiimage */

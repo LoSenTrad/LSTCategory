@@ -55,8 +55,12 @@ NS_ASSUME_NONNULL_BEGIN
 /** 获取当前时间戳 */
 + (nonnull NSString *)getTimeStamp;
 /** string类型转URL类型 */
-- (nonnull NSURL *)stringToURL;
 
+- (nonnull NSURL *)stringToURL;
+/** 根据字符串获取宽度 (不适合富文本) */
+- (CGFloat)getWidthWithFont:(UIFont *)font;
+/** 根据字符串获取高度(不适合富文本) */
+- (CGFloat)getHeightWithFont:(UIFont *)font andWidth:(CGFloat)width;
 
 #pragma mark - ***** 获取系统信息 *****
 /** 获取app版本号 */

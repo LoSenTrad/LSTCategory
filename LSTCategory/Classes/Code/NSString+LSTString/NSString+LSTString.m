@@ -25,9 +25,9 @@
 - (NSString *)base64DecodeString {
     //注意：该字符串是base64编码后的字符串
     //1、转换为二进制数据（完成了解码的过程）
-    NSData *data=[[NSData alloc]initWithBase64EncodedString:self options:0];
+    NSData *data=[[NSData alloc] initWithBase64EncodedString:self options:0];
     //2、把二进制数据转换成字符串
-    return [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
+    return [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
 }
 
 + (nonnull NSString *)valiMobile:(NSString *)mobile {
@@ -204,6 +204,25 @@
 
 - (nonnull NSURL *)stringToURL {
     return [NSURL URLWithString:self];
+}
+
+/** 根据字符串获取宽度 (不适合富文本) */
+- (CGFloat)getWidthWithFont:(UIFont *)font {
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 1000, 0)];
+    label.text = self;
+    label.font = font;
+    [label sizeToFit];
+    return label.frame.size.width;
+}
+/** 根据字符串获取高度(不适合富文本) */
+- (CGFloat)getHeightWithFont:(UIFont *)font andWidth:(CGFloat)width {
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, width, 0)];
+    label.text = self;
+    label.font = font;
+    label.numberOfLines = 0;
+    [label sizeToFit];
+    CGFloat height = label.frame.size.height;
+    return height;
 }
 
 #pragma mark - ***** 获取系统信息 *****

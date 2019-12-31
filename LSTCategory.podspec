@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LSTCategory'
-  s.version          = '0.1.12231756'
+  s.version          = '0.1.12311529'
   s.summary          = 'LSTCategory.'
   s.description      = 'A short description of LSTCategory.'
   s.homepage         = 'https://github.com/LoSenTrad/LSTCategory'
@@ -30,6 +30,18 @@ Pod::Spec.new do |s|
       #core.public_header_files = 'ZFPlayer/Classes/Core/**/*.h'
       code.frameworks = 'UIKit'
   end
+  
+  s.subspec 'LSTGestureEvents' do |gesture|
+      gesture.source_files = 'LSTCategory/Classes/Code/LSTGestureEvents/**/*'
+      #core.public_header_files = 'ZFPlayer/Classes/Core/**/*.h'
+      gesture.frameworks = 'UIKit'
+  end
+  
+  s.subspec 'LSTControlEvents' do |controlevents|
+       controlevents.source_files = 'LSTCategory/Classes/Code/LSTControlEvents/**/*'
+       #core.public_header_files = 'ZFPlayer/Classes/Core/**/*.h'
+       controlevents.frameworks = 'UIKit'
+   end
   
   
   # s.resource_bundles = {

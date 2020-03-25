@@ -7,6 +7,7 @@
 //
 
 #import "UIImage+LSTImage.h"
+#import  "YYWebImage.h"
 
 
 
@@ -256,6 +257,30 @@
     UIGraphicsEndImageContext();
     
     return image;
+}
+
+/** YYWebImage 下载图片 */
++ (void)lst_DownLoadImageWithUrl:(NSString *)url
+                            succ:(void (^)(id image))succ
+                            fail:(void (^)(void))fail {
+    
+    __block UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(-300, -300, 30, 30)];
+    imgView.backgroundColor = UIColor.yellowColor;
+    [[UIApplication sharedApplication].keyWindow addSubview:imgView];
+    [imgView yy_setImageWithURL:[NSURL URLWithString:url] placeholder:nil options:0 completion:^(UIImage * _Nullable image, NSURL * _Nonnull url, YYWebImageFromType from, YYWebImageStage stage, NSError * _Nullable error) {
+        
+        if (error) {
+            fail();
+        }else {
+            succ(image);
+        }
+      
+        [imgView removeFromSuperview];
+        imgView = nil;
+        
+    }];
+    
+    
 }
 
 //// 引用自stackflow

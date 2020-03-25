@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LSTCategory'
-  s.version          = '0.1.123148'
+  s.version          = '0.2.03250456'
   s.summary          = 'LSTCategory.'
   s.description      = 'A short description of LSTCategory.'
   s.homepage         = 'https://github.com/LoSenTrad/LSTCategory'
@@ -50,5 +50,7 @@ Pod::Spec.new do |s|
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-   s.dependency 'YYModel'
+  s.dependency 'YYModel'
+  s.dependency 'YYWebImage'
+ 
 end

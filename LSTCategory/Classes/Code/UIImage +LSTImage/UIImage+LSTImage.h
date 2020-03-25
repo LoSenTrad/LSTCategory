@@ -10,6 +10,7 @@
 
 
 
+
 @interface UIImage (LSTImage)
 
 /**
@@ -60,6 +61,11 @@
 + (NSString *)lst_GetLaunchImageName;
 
 + (UIImage *)lst_GetLaunchImage;
+
+/** YYWebImage 下载图片 */
++ (void)lst_DownLoadImageWithUrl:(NSString *)url
+                            succ:(void (^)(id image))succ
+                            fail:(void (^)(void))fail;
 
 //设置图片快捷方式
 UIImage *LSTImageWithName(NSString *imgName);

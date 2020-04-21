@@ -270,11 +270,15 @@
     [imgView yy_setImageWithURL:[NSURL URLWithString:url] placeholder:nil options:0 completion:^(UIImage * _Nullable image, NSURL * _Nonnull url, YYWebImageFromType from, YYWebImageStage stage, NSError * _Nullable error) {
         
         if (error) {
-            fail();
+            if (fail) {
+                fail();
+            }
         }else {
-            succ(image);
+            if (succ) {
+                succ(image);
+            }
         }
-      
+        
         [imgView removeFromSuperview];
         imgView = nil;
         

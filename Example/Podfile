@@ -4,8 +4,9 @@ platform :ios, '8.0'
 
 target 'LSTCategory_Example' do
   pod 'LSTCategory', :path => '../'
-  pod 'LSTCategory/UIImage+LSTImage', :path => '../'
-  pod 'LSTCategory/NSArray+LSTArray', :path => '../'
+
+  
+  
   
   target 'LSTCategory_Tests' do
     inherit! :search_paths

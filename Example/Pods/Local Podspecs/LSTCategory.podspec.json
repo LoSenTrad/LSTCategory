@@ -1,6 +1,6 @@
 {
   "name": "LSTCategory",
-  "version": "0.2.04281203",
+  "version": "0.2.04281308",
   "summary": "LSTCategory.",
   "description": "A short description of LSTCategory.",
   "homepage": "https://github.com/LoSenTrad/LSTCategory",
@@ -13,12 +13,20 @@
   },
   "source": {
     "git": "https://github.com/LoSenTrad/LSTCategory.git",
-    "tag": "0.2.04281203"
+    "tag": "0.2.04281308"
   },
   "platforms": {
     "ios": "8.0"
   },
   "default_subspecs": "Code",
+  "dependencies": {
+    "YYModel": [
+
+    ],
+    "YYWebImage": [
+
+    ]
+  },
   "subspecs": [
     {
       "name": "Code",
@@ -58,22 +66,12 @@
     {
       "name": "UIImage+LSTImage",
       "source_files": "LSTCategory/Classes/Code/UIImage+LSTImage/**/*",
-      "frameworks": "UIKit",
-      "dependencies": {
-        "YYWebImage": [
-
-        ]
-      }
+      "frameworks": "UIKit"
     },
     {
       "name": "NSArray+LSTArray",
       "source_files": "LSTCategory/Classes/Code/NSArray+LSTArray/**/*",
-      "frameworks": "UIKit",
-      "dependencies": {
-        "YYModel": [
-
-        ]
-      }
+      "frameworks": "UIKit"
     }
   ]
 }

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'LSTCategory'
-    s.version          = '0.2.04281408'
+    s.version          = '0.2.04281504'
     s.summary          = 'LSTCategory.'
     s.description      = 'A short description of LSTCategory.'
     s.homepage         = 'https://github.com/LoSenTrad/LSTCategory'
@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
     # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
     
     s.ios.deployment_target = '8.0'
-    
+    s.static_framework = true
     #s.source_files = 'LSTCategory/Classes/**/*'
     
     

@@ -14,6 +14,7 @@
 #import <CALayer+LSTLayer.h>
 #import <NSArray+LSTArray.h>
 #import <UIImage+LSTImage.h>
+#import <YYModel.h>
 
 
 

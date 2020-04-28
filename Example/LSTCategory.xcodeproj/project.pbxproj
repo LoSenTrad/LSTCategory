@@ -156,7 +156,7 @@
 			children = (
 				312B874E230C4DCD00B1F784 /* UIFont+LSTFont */,
 				313D6EA723040BD500A7E1B8 /* UIProgressView+LSTWebViewProgress */,
-				31FAEE6222FC037800973183 /* UIImage +LSTImage */,
+				31FAEE6222FC037800973183 /* UIImage+LSTImage */,
 				31FAEE5B22FBFA8900973183 /* CALayer+LSTLayer */,
 				31FAEE4722FBCA9600973183 /* UIView+LSTView */,
 				31FAEE4A22FBCA9600973183 /* NSString+LSTString */,
@@ -222,13 +222,13 @@
 			path = "CALayer+LSTLayer";
 			sourceTree = "<group>";
 		};
-		31FAEE6222FC037800973183 /* UIImage +LSTImage */ = {
+		31FAEE6222FC037800973183 /* UIImage+LSTImage */ = {
 			isa = PBXGroup;
 			children = (
 				31FAEE6622FC09CC00973183 /* UIImage+LSTImage.h */,
 				31FAEE6722FC09CD00973183 /* UIImage+LSTImage.m */,
 			);
-			path = "UIImage +LSTImage";
+			path = "UIImage+LSTImage";
 			sourceTree = "<group>";
 		};
 		6003F581195388D10070C39A = {

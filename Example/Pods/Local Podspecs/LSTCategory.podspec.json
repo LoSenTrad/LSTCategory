@@ -1,6 +1,6 @@
 {
   "name": "LSTCategory",
-  "version": "0.1.123148",
+  "version": "0.2.04281203",
   "summary": "LSTCategory.",
   "description": "A short description of LSTCategory.",
   "homepage": "https://github.com/LoSenTrad/LSTCategory",
@@ -13,20 +13,12 @@
   },
   "source": {
     "git": "https://github.com/LoSenTrad/LSTCategory.git",
-    "tag": "0.1.123148"
+    "tag": "0.2.04281203"
   },
   "platforms": {
     "ios": "8.0"
   },
   "default_subspecs": "Code",
-  "dependencies": {
-    "YYModel": [
-
-    ],
-    "YYWebImage": [
-
-    ]
-  },
   "subspecs": [
     {
       "name": "Code",
@@ -42,6 +34,46 @@
       "name": "LSTControlEvents",
       "source_files": "LSTCategory/Classes/Code/LSTControlEvents/**/*",
       "frameworks": "UIKit"
+    },
+    {
+      "name": "NSString+LSTString",
+      "source_files": "LSTCategory/Classes/Code/NSString+LSTString/**/*",
+      "frameworks": "UIKit"
+    },
+    {
+      "name": "UIColor+LSTColor",
+      "source_files": "LSTCategory/Classes/Code/UIColor+LSTColor/**/*",
+      "frameworks": "UIKit"
+    },
+    {
+      "name": "UIFont+LSTFont",
+      "source_files": "LSTCategory/Classes/Code/UIFont+LSTFont/**/*",
+      "frameworks": "UIKit"
+    },
+    {
+      "name": "UIView+LSTView",
+      "source_files": "LSTCategory/Classes/Code/UIView+LSTView/**/*",
+      "frameworks": "UIKit"
+    },
+    {
+      "name": "UIImage+LSTImage",
+      "source_files": "LSTCategory/Classes/Code/UIImage+LSTImage/**/*",
+      "frameworks": "UIKit",
+      "dependencies": {
+        "YYWebImage": [
+
+        ]
+      }
+    },
+    {
+      "name": "NSArray+LSTArray",
+      "source_files": "LSTCategory/Classes/Code/NSArray+LSTArray/**/*",
+      "frameworks": "UIKit",
+      "dependencies": {
+        "YYModel": [
+
+        ]
+      }
     }
   ]
 }

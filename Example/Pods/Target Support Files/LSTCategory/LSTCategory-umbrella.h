@@ -22,6 +22,8 @@
 #import "UILabel+WY_RichText.h"
 #import "UIProgressView+LSTWebViewProgress.h"
 #import "UIView+LSTView.h"
+#import "NSArray+LSTArray.h"
+#import "UIImage+LSTImage.h"
 
 FOUNDATION_EXPORT double LSTCategoryVersionNumber;
 FOUNDATION_EXPORT const unsigned char LSTCategoryVersionString[];

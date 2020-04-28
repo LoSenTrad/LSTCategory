@@ -4,10 +4,9 @@ platform :ios, '8.0'
 
 target 'LSTCategory_Example' do
   pod 'LSTCategory', :path => '../'
+#  pod 'YYModel'
+#  pod 'YYWebImage'
 
-  
-  
-  
   target 'LSTCategory_Tests' do
     inherit! :search_paths
 

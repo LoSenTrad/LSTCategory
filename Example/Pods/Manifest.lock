@@ -1,9 +1,9 @@
 PODS:
-  - LSTCategory (0.2.04281308):
-    - LSTCategory/Code (= 0.2.04281308)
+  - LSTCategory (0.2.04281335):
+    - LSTCategory/Code (= 0.2.04281335)
     - YYModel
     - YYWebImage
-  - LSTCategory/Code (0.2.04281308):
+  - LSTCategory/Code (0.2.04281335):
     - YYModel
     - YYWebImage
   - YYCache (1.0.4)
@@ -30,12 +30,12 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  LSTCategory: 1f02942e50e6369846906407a4159cebd332ecd6
+  LSTCategory: a356d7b7c4d7da9daccc00d778d5b2b1dccca6f3
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
   YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: 740643c33cdac78d5351e10aa7b395e3d1ac901f
+PODFILE CHECKSUM: e6af6fdfe3e4d5e043efb1e033151aa77c14403b
 
 COCOAPODS: 1.9.1

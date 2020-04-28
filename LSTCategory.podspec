@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'LSTCategory'
-    s.version          = '0.2.04281519'
+    s.version          = '0.2.04281546'
     s.summary          = 'LSTCategory.'
     s.description      = 'A short description of LSTCategory.'
     s.homepage         = 'https://github.com/LoSenTrad/LSTCategory'
@@ -55,16 +55,16 @@ Pod::Spec.new do |s|
         lst_view.source_files = 'LSTCategory/Classes/Code/UIView+LSTView/**/*'
         lst_view.frameworks = 'UIKit'
     end
-    s.subspec 'UIImage+LSTImage' do |lst_image|
-        lst_image.source_files = 'LSTCategory/Classes/Code/UIImage+LSTImage/**/*'
-        lst_image.frameworks = 'UIKit'
-        lst_image.dependency 'YYWebImage'
-    end
-    s.subspec 'NSArray+LSTArray' do |lst_array|
-        lst_array.source_files = 'LSTCategory/Classes/Code/NSArray+LSTArray/**/*'
-        lst_array.frameworks = 'UIKit'
-        lst_array.dependency 'YYModel'
-    end
+#    s.subspec 'UIImage+LSTImage' do |lst_image|
+#        lst_image.source_files = 'LSTCategory/Classes/Code/UIImage+LSTImage/**/*'
+#        lst_image.frameworks = 'UIKit'
+#        lst_image.dependency 'YYWebImage'
+#    end
+#    s.subspec 'NSArray+LSTArray' do |lst_array|
+#        lst_array.source_files = 'LSTCategory/Classes/Code/NSArray+LSTArray/**/*'
+#        lst_array.frameworks = 'UIKit'
+#        lst_array.dependency 'YYModel'
+#    end
     
     
     # s.resource_bundles = {

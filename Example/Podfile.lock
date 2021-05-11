@@ -1,7 +1,7 @@
 PODS:
-  - LSTCategory (0.2.04281530):
-    - LSTCategory/Code (= 0.2.04281530)
-  - LSTCategory/Code (0.2.04281530)
+  - LSTCategory (0.2.04281546):
+    - LSTCategory/Code (= 0.2.04281546)
+  - LSTCategory/Code (0.2.04281546)
 
 DEPENDENCIES:
   - LSTCategory (from `../`)
@@ -11,8 +11,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  LSTCategory: c97b9d15c75ada31ac92d3c477e85efe30ec3be1
+  LSTCategory: a646b02eefb8c36c946feeb5203699c1cff7dfee
 
-PODFILE CHECKSUM: e6af6fdfe3e4d5e043efb1e033151aa77c14403b
+PODFILE CHECKSUM: e1e8c130e3143090e19bf0d61b88f349aea8562f
 
 COCOAPODS: 1.9.1

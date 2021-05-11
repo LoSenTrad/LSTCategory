@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'LSTCategory'
-    s.version          = '0.2.04281546'
+    s.version          = '0.2.05'
     s.summary          = 'LSTCategory.'
     s.description      = 'A short description of LSTCategory.'
     s.homepage         = 'https://github.com/LoSenTrad/LSTCategory'
@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
     # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
     
     s.ios.deployment_target = '8.0'
-    s.static_framework = true
+    #s.static_framework = true
     #s.source_files = 'LSTCategory/Classes/**/*'
     
     
@@ -55,6 +55,10 @@ Pod::Spec.new do |s|
         lst_view.source_files = 'LSTCategory/Classes/Code/UIView+LSTView/**/*'
         lst_view.frameworks = 'UIKit'
     end
+    s.subspec 'NSObject+LSTSwizzle' do |lst_swizzle|
+        lst_swizzle.source_files = 'LSTCategory/Classes/Code/NSObject+LSTSwizzle/**/*'
+        lst_swizzle.frameworks = 'UIKit'
+    end
 #    s.subspec 'UIImage+LSTImage' do |lst_image|
 #        lst_image.source_files = 'LSTCategory/Classes/Code/UIImage+LSTImage/**/*'
 #        lst_image.frameworks = 'UIKit'
@@ -73,6 +77,6 @@ Pod::Spec.new do |s|
     
     # s.public_header_files = 'Pod/Classes/**/*.h'
     # s.frameworks = 'UIKit', 'MapKit'
-#    s.dependency 'YYModel'
+    s.dependency 'YYModel'
 #    s.dependency 'YYWebImage'
 end

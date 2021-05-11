@@ -15,6 +15,7 @@
 //#import <NSArray+LSTArray.h>
 //#import <UIImage+LSTImage.h>
 //#import <YYModel.h>
+#import <LSTControlEvents.h>
 
 
 
@@ -24,6 +25,7 @@
 
 /** <#.....#> */
 @property (nonatomic,strong) UIView *testView;
+@property (weak, nonatomic) IBOutlet UIButton *testBtn;
 
 @end
 
@@ -55,13 +57,49 @@
     
     
    
+//    [_testBtn addTarget:self action:@selector(test1) forControlEvents:UIControlEventTouchUpInside];
+//    [_testBtn addTarget:self action:@selector(test1) forControlEvents:UIControlEventTouchUpInside];
+
     
+//    [_testBtn addTarget:self action:@selector(test3) forControlEvents:UIControlEventTouchUpInside];
     
-  
+    //用这个api 每次添加一次 就会回调一次
+    [_testBtn addControlEvents:UIControlEventTouchUpInside withAction:^(id  _Nonnull sender) {
+        
+    }];
+    [_testBtn addControlEvents:UIControlEventTouchUpInside withAction:^(id  _Nonnull sender) {
+        
+    }];
+    
+    //用这个api 设置唯一key 只能回调一次
+    [_testBtn addControlEvents:UIControlEventTouchUpInside withAction:^(id  _Nonnull sender) {
+        
+    } forKey:@"这是唯一key"];
+
+    //这个api 里面设置了唯一key 所以多次添加只会回调一次
+    [_testBtn addEventTouchUpInsideAction:^(id  _Nonnull sender) {
+
+    }];
+//    [_testBtn addEventTouchUpInsideAction:^(id  _Nonnull sender) {
+//
+//    }];
+//
+    
     
     
    
 
+}
+
+- (void)test1 {
+    
+}
+- (void)test2 {
+    
+}
+
+- (void)test3 {
+    
 }
 
 

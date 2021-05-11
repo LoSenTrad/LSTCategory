@@ -1,6 +1,6 @@
 {
   "name": "LSTCategory",
-  "version": "0.2.04281530",
+  "version": "0.2.04281546",
   "summary": "LSTCategory.",
   "description": "A short description of LSTCategory.",
   "homepage": "https://github.com/LoSenTrad/LSTCategory",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/LoSenTrad/LSTCategory.git",
-    "tag": "0.2.04281530"
+    "tag": "0.2.04281546"
   },
   "platforms": {
     "ios": "8.0"
@@ -54,6 +54,11 @@
     {
       "name": "UIView+LSTView",
       "source_files": "LSTCategory/Classes/Code/UIView+LSTView/**/*",
+      "frameworks": "UIKit"
+    },
+    {
+      "name": "NSObject+LSTSwizzle",
+      "source_files": "LSTCategory/Classes/Code/NSObject+LSTSwizzle/**/*",
       "frameworks": "UIKit"
     }
   ]

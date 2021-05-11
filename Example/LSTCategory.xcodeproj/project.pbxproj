@@ -513,6 +513,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LSTCategory/LSTCategory-Prefix.pch";
 				INFOPLIST_FILE = "LSTCategory/LSTCategory-Info.plist";
+				MARKETING_VERSION = 0.2.5;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -531,6 +532,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LSTCategory/LSTCategory-Prefix.pch";
 				INFOPLIST_FILE = "LSTCategory/LSTCategory-Info.plist";
+				MARKETING_VERSION = 0.2.5;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";

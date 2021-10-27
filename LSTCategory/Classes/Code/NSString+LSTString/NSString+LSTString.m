@@ -204,7 +204,7 @@
 - (void)timeStampConvert:(LSTStringConvertBlock)block {
     NSInteger totalSeconds = [self integerValue];
 
-    NSString *hours =  [NSString stringWithFormat:@"%zd", totalSeconds/60/60%24];
+    NSString *hours =  [NSString stringWithFormat:@"%d", totalSeconds/60/60];
     NSString *minute = [NSString stringWithFormat:@"%zd", (totalSeconds/60)%60];
     NSString *second = [NSString stringWithFormat:@"%zd", totalSeconds%60];
     

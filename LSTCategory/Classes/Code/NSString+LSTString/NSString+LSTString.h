@@ -72,7 +72,7 @@ NS_ASSUME_NONNULL_BEGIN
 /** 获取app版本号 */
 + (NSString *_Nullable)lst_loadAppVersion;
 /** 获取系统版本 */
-+ (float)lst_loadSystemVersion;
++ (NSString *_Nullable)lst_loadSystemVersion;
 /** 获取手机型号 */
 + (NSString *)lst_loadDeviceModel;
 /** 获取app唯一标识 */

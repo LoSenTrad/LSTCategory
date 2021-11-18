@@ -277,8 +277,8 @@
     return [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
 }
 
-+ (float)lst_loadSystemVersion {
-    return [[[UIDevice currentDevice] systemVersion] floatValue];
++ (NSString *_Nullable)lst_loadSystemVersion {
+    return [[UIDevice currentDevice] systemVersion];
 }
 
 /** 获取手机型号 */

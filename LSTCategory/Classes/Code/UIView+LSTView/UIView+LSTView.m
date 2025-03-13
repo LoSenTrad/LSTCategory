@@ -11,136 +11,119 @@
 #define kShadowViewTag 2132
 #define kValidDirections [NSArray arrayWithObjects: @"top", @"bottom", @"left", @"right",nil]
 
-@implementation UIView (QTFrame)
+@implementation UIView (LSTFrame)
 
-
-- (void)setX:(CGFloat)x
-{
+- (void)setLst_x:(CGFloat)lst_x {
     CGRect frame = self.frame;
-    frame.origin.x = x;
+    frame.origin.x = lst_x;
     self.frame = frame;
 }
 
-- (CGFloat)x {
+- (CGFloat)lst_x {
     return self.frame.origin.x;
 }
 
-- (void)setY:(CGFloat)y
-{
+- (void)setLst_y:(CGFloat)lst_y {
     CGRect frame = self.frame;
-    frame.origin.y = y;
+    frame.origin.y = lst_y;
     self.frame = frame;
 }
 
-- (CGFloat)y
+- (CGFloat)lst_y
 {
     return self.frame.origin.y;
 }
 
-- (CGFloat)width
+- (CGFloat)lst_width
 {
     return self.frame.size.width;
 }
 
-- (void)setWidth:(CGFloat)width
-{
+- (void)setLst_width:(CGFloat)lst_width {
     CGRect frame = self.frame;
-    frame.size.width = width;
+    frame.size.width = lst_width;
     self.frame = frame;
 }
 
-
-- (CGFloat)height
+- (CGFloat)lst_height
 {
     return self.frame.size.height;
 }
 
-- (void)setHeight:(CGFloat)height
-{
+- (void)setLst_height:(CGFloat)lst_height {
     CGRect frame = self.frame;
-    frame.size.height = height;
+    frame.size.height = lst_height;
     self.frame = frame;
 }
 
-- (void)setSize:(CGSize)size
-{
-    
+- (void)setLst_size:(CGSize)lst_size {
     CGRect frame = self.frame;
-    frame.size = size;
+    frame.size = lst_size;
     self.frame = frame;
 }
 
-- (void)setCenterX:(CGFloat)centerX
-{
+- (void)setLst_centerX:(CGFloat)lst_centerX {
     CGPoint center = self.center;
-    center.x = centerX;
+    center.x = lst_centerX;
     self.center = center;
 }
 
--(CGFloat)centerX{
+-(CGFloat)lst_centerX{
     return self.center.x;
 }
 
-- (void)setCenterY:(CGFloat)centerY
-{
+- (void)setLst_centerY:(CGFloat)lst_centerY {
     CGPoint center = self.center;
-    center.y = centerY;
+    center.y = lst_centerY;
     self.center = center;
 }
 
--(CGFloat)centerY{
+-(CGFloat)lst_centerY{
     return self.center.y;
 }
 
-- (CGSize)size
+- (CGSize)lst_size
 {
     return self.frame.size;
 }
 
-- (CGFloat) top
+- (CGFloat)lst_top
 {
     return self.frame.origin.y;
 }
 
-- (void) setTop: (CGFloat) newtop
-{
+- (void)setLst_top:(CGFloat)lst_top {
     CGRect newframe = self.frame;
-    newframe.origin.y = newtop;
+    newframe.origin.y = lst_top;
     self.frame = newframe;
 }
 
-- (CGFloat) left
-{
+- (CGFloat)lst_left {
     return self.frame.origin.x;
 }
 
-- (void) setLeft: (CGFloat) newleft
-{
+- (void) setLst_left:(CGFloat)lst_left{
     CGRect newframe = self.frame;
-    newframe.origin.x = newleft;
+    newframe.origin.x = lst_left;
     self.frame = newframe;
 }
 
-- (CGFloat) bottom
-{
+- (CGFloat)lst_bottom {
     return self.frame.origin.y + self.frame.size.height;
 }
 
-- (void) setBottom: (CGFloat) newbottom
-{
+- (void) setLst_bottom:(CGFloat)lst_bottom {
     CGRect newframe = self.frame;
-    newframe.origin.y = newbottom - self.frame.size.height;
+    newframe.origin.y = lst_bottom - self.frame.size.height;
     self.frame = newframe;
 }
 
-- (CGFloat) right
-{
+- (CGFloat)lst_right {
     return self.frame.origin.x + self.frame.size.width;
 }
 
-- (void) setRight: (CGFloat) newright
-{
-    CGFloat delta = newright - (self.frame.origin.x + self.frame.size.width);
+- (void) setLst_right:(CGFloat)lst_right {
+    CGFloat delta = lst_right - (self.frame.origin.x + self.frame.size.width);
     CGRect newframe = self.frame;
     newframe.origin.x += delta ;
     self.frame = newframe;

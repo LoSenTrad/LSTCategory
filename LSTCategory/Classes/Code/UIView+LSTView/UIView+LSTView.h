@@ -17,30 +17,30 @@ typedef enum : NSUInteger {
 
 
 
-@interface UIView (QTFrame)
+@interface UIView (LSTFrame)
 
 /** 获取/设置view的x坐标 */
-@property (nonatomic, assign) CGFloat x;
+@property (nonatomic, assign) CGFloat lst_x;
 /** 获取/设置view的x坐标 */
-@property (nonatomic, assign) CGFloat y;
+@property (nonatomic, assign) CGFloat lst_y;
 /** 获取/设置view的x坐标 */
-@property (nonatomic, assign) CGFloat width;
+@property (nonatomic, assign) CGFloat lst_width;
 /** 获取/设置view的x坐标 */
-@property (nonatomic, assign) CGFloat height;
+@property (nonatomic, assign) CGFloat lst_height;
 /** 获取/设置view的x坐标 */
-@property (nonatomic, assign) CGFloat centerX;
+@property (nonatomic, assign) CGFloat lst_centerX;
 /** 获取/设置view的x坐标 */
-@property (nonatomic, assign) CGFloat centerY;
+@property (nonatomic, assign) CGFloat lst_centerY;
 /** 获取/设置view的x坐标 */
-@property (nonatomic, assign) CGFloat top;
+@property (nonatomic, assign) CGFloat lst_top;
 /** 获取/设置view的左边坐标 */
-@property (nonatomic, assign) CGFloat left;
+@property (nonatomic, assign) CGFloat lst_left;
 /** 获取/设置view的底部坐标Y */
-@property (nonatomic, assign) CGFloat bottom;
+@property (nonatomic, assign) CGFloat lst_bottom;
 /** 获取/设置view的右边坐标 */
-@property (nonatomic, assign) CGFloat right;
+@property (nonatomic, assign) CGFloat lst_right;
 /** 获取/设置view的size */
-@property (nonatomic, assign) CGSize size;
+@property (nonatomic, assign) CGSize lst_size;
 
 
 /** 屏幕大小 */
